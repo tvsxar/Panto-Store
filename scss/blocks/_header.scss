@@ -1,0 +1,81 @@
+.header {
+    position: relative;
+
+    padding-top: 40px;
+    
+    background-image: url("./../img/header/header-bg.jpg");
+    aspect-ratio: 1440 / 1084;
+    background-size: cover;
+
+    @include retina-bg (url("./../img/header/header-bg@2x.jpg"));
+
+    color: $header-text-color;
+
+    
+
+    a {
+        color: $header-text-color;
+    }
+}
+
+.header-nav {
+    margin-bottom: 86px;
+}
+
+.header-content {
+    text-align: center;
+
+    p {
+        max-width: 606px;
+        margin: 0 auto;
+        
+        font-size: 24px;
+        line-height: 160%;
+
+        opacity: 0.8;
+    }
+}
+
+.header-title {
+    margin-bottom: 14px;
+
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.8px;
+    text-transform: capitalize;
+}
+
+.header-search {
+    margin: 45px auto 0;
+}
+
+// Dots
+
+.header-dot-sofa {
+    position: absolute;
+    top: calc(685 * 100% / 1084);
+    left: calc(296 * 100% / 1440);
+}
+
+.header-dot-vase {
+    position: absolute;
+    top: calc(754 * 100% / 1084);
+    left: calc(114 * 100% / 1440);
+
+    transform: translate(-50%, -50%);
+}
+
+.header-dot-item {
+    position: absolute;
+    top: calc(787 * 100% / 1084 );
+    left: calc(810 * 100% / 1440);
+
+    transform: translate(-50%, -50%);
+}
+
+.header-dot-wall {
+    position: absolute;
+    top: calc(821 * 100% / 1084);
+    right: calc(47 * 100% / 1440);
+}
