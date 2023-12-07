@@ -1,0 +1,54 @@
+.info-hint {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding-top: 12px;
+
+    width: 112px;
+    height: 156px;
+    background-image: url(./../img/icons/hint.svg);
+    background-repeat: no-repeat;
+}
+
+.info-hint-radio:checked + .info-hint-fake {
+    background-image: url(./../img/icons/checkbox.svg);
+    background-repeat: no-repeat;
+    background-position: center, center;
+}
+
+.info-hint-radio {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.info-hint-fake {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: grey;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    box-shadow: (0px 4px 6px rgba(0, 0, 0, 0.10));
+
+    &--orange {
+        background-color: $ui-orange;
+    }
+
+    &--blue {
+        background-color: $ui-blue;
+    }
+
+    &--grey {
+        background-color: $ui-grey;
+    }
+}

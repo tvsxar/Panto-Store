@@ -1,0 +1,19 @@
+.read-more {
+    color: $accent-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 185%;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    &::after {
+        content: url('./../img/icons/arrow-right.svg');
+        height: 24px;
+    }
+
+    &-large {
+        font-size: 18px;
+    }
+}

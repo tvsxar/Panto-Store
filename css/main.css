@@ -98,6 +98,10 @@ html, body {
   margin: 0 auto;
 }
 
+.none {
+  display: none !important;
+}
+
 .header {
   position: relative;
   padding-top: 40px;
@@ -292,4 +296,245 @@ html, body {
   100% {
     transform: scale(1.2);
   }
+}
+.info-hint {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-top: 12px;
+  width: 112px;
+  height: 156px;
+  background-image: url(./../img/icons/hint.svg);
+  background-repeat: no-repeat;
+}
+
+.info-hint-radio:checked + .info-hint-fake {
+  background-image: url(./../img/icons/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+.info-hint-radio {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.info-hint-fake {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: grey;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.info-hint-fake--orange {
+  background-color: #E58411;
+}
+.info-hint-fake--blue {
+  background-color: #00D6C9;
+}
+.info-hint-fake--grey {
+  background-color: #7c7c7c;
+}
+
+.benefits {
+  padding: 120px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefits-title {
+  font-size: 42px;
+  font-weight: 700;
+  max-width: 260px;
+}
+
+.benefit-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.benefit-text {
+  margin-bottom: 14px;
+  line-height: 180%;
+  opacity: 0.8;
+}
+
+.products {
+  background-color: #F7F7F7;
+  padding: 50px 0;
+}
+
+.products-title {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.products-tabs {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.products-slider {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.products-link {
+  text-align: center;
+}
+
+.read-more {
+  color: #E58411;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 185%;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+}
+.read-more::after {
+  content: url("./../img/icons/arrow-right.svg");
+  height: 24px;
+}
+.read-more-large {
+  font-size: 18px;
+}
+
+.tab-controls {
+  display: inline-flex;
+  padding: 6px;
+  align-items: center;
+  border-radius: 44px;
+  background-color: #eee;
+}
+
+.tab-controls-btn {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  color: rgba(31, 31, 31, 0.8);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 185%; /* 33.3px */
+  transition: background-color 0.2s ease-in;
+}
+.tab-controls-btn:hover {
+  background-color: rgba(218, 218, 218, 0.5);
+}
+.tab-controls-btn--active {
+  background-color: #FFF;
+}
+
+.card {
+  width: 268px;
+  font-family: "Inter", sans-serif;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-photo {
+  height: 240px;
+  border-radius: 20px 20px 0 0;
+  background-color: #FAFAFA;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.card-desc {
+  border-radius: 0 0 20px 20px;
+  background-color: #FFF;
+  height: 202px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 22px 28px;
+}
+
+.card-img {
+  width: 225px;
+  margin-top: -50px;
+}
+
+.card-category {
+  color: #8D8D8D;
+  font-size: 16px;
+}
+
+.card-title {
+  color: #0D1B39;
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.card-rating {
+  display: flex;
+  gap: 3px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #0D1B39;
+}
+.card-price::before {
+  content: attr(data-value);
+  font-size: 15px;
+}
+
+.card-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 31px;
+  background: #0D1B39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+.card-button:hover {
+  opacity: 0.8;
+}
+
+.slider {
+  display: flex;
+  gap: 42px;
 }/*# sourceMappingURL=main.css.map */
